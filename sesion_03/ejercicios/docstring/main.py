@@ -1,0 +1,3 @@
+import aritmetica
+
+help(aritmetica)
