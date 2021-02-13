@@ -1,0 +1,9 @@
+{
+  "nombre": "Mauricio",
+  "numero": 123123,
+  "activo": true,
+  "meta": {
+    "pagina": 1
+  },
+  "lenguajes": ["JavaScript", "Python", "Elixir"]
+}

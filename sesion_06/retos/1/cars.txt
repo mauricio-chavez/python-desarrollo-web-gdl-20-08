@@ -1,0 +1,2 @@
+Volvo	Rojo	Medio	200000
+Audi	Morado	Alto	100000000
