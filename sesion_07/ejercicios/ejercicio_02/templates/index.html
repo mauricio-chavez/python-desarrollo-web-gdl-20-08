@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hola, {{ name }}</h1>
+  {% if name == 'Flask' %}
+  <p>Esta es mi aplicación</p>
+
+
+  <form>
+    <label for="name-id">Nombre</label>
+    <input type="text" name="name" id="name-id">
+    <button>Enviar</button>
+  </form>
+  {% endif %}
+
+  <h2 class="product-title">Mis productos</h2>
+  <ol>
+    {% for product in products %}
+    <li class="product-item">{{ product }}</li>
+    {% endfor %}
+  </ol>
+
+  <a role="button" class="btn btn-primary" href="https://duckduckgo.com">Ir a DuckDuckGo</a>
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% from '_macros.html' import create_input %}
+
+{% block content %}
+{% for error in errors %}
+<div class="alert alert-danger" role="alert">
+  {{ error }}
+</div>
+{% endfor %}
+
+<h1>Productos</h1>
+
+{% if products %}
+<ul>
+  {% for product in products %}
+  <li>{{ product.name }} - {{ product.amount }}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>Aún no hay productos</p>
+{% endif %}
+
+
+
+<form method="POST" class="mt-5">
+  <h2>Crear producto</h2>
+  {{ create_input('Nombre', 'name') }}
+  {{ create_input('Precio', 'amount', 'number') }}
+  <button type="submit" class="btn btn-primary">Crear</button>
+</form>
+
+{% endblock content %}

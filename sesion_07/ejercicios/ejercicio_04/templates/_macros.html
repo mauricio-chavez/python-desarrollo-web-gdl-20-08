@@ -1,0 +1,6 @@
+{% macro create_input(label, name, type="text") %}
+<div class="mb-3">
+  <label for="{{ name }}-id" class="form-label">{{ label }}:</label>
+  <input type="{{ type }}" class="form-control" name="{{ name }}" id="{{ name }}-id">
+</div>
+{% endmacro %}

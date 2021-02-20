@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Suma</h1>
+
+{% if resultado %}
+<p>El resultado es {{ resultado }}</p>
+<a role="button" href="/suma" class="btn btn-primary">Volver</a>
+{% else %}
+<form>
+  <div class="mb-3">
+    <div class="mb-3">
+      <label for="n1-id" class="form-label">Primero:</label>
+      <input type="number" class="form-control" name="n1" id="n1-id" required />
+    </div>
+    <div class="mb-3">
+      <label for="n2-id" class="form-label">Segundo:</label>
+      <input type="number" class="form-control" name="n2" id="n2-id" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Calcular</button>
+  </div>
+</form>
+{% endif %}
+{% endblock content %}
