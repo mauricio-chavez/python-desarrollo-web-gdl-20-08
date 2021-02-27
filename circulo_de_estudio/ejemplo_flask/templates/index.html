@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Productos</title>
+</head>
+<body>
+    <h1>Crear producto</h1>
+
+    <form method="post">
+        <input type="text" name="name" />
+        <button>Enviar</button>
+    </form>
+
+
+    <h1>Productos</h1>
+    <ul>
+        {% for product in products %}
+        <li>{{ product }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
